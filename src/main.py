@@ -2,10 +2,10 @@ from fastapi_users import FastAPIUsers
 
 from fastapi import FastAPI, Depends
 
-from src.auth.base_config import auth_backend
-from src.auth.manager import get_user_manager
-from src.auth.models import User
-from src.auth.schemas import UserRead, UserCreate
+from auth.base_config import auth_backend
+from auth.manager import get_user_manager
+from auth.models import User
+from auth.schemas import UserRead, UserCreate
 
 app = FastAPI(
     title="Trading App"
