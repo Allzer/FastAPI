@@ -2,9 +2,9 @@ from fastapi_users import FastAPIUsers
 
 from fastapi import FastAPI, Depends
 
-from src.auth.auth import auth_backend
-from src.auth.database import User
+from src.auth.base_config import auth_backend
 from src.auth.manager import get_user_manager
+from src.auth.models import User
 from src.auth.schemas import UserRead, UserCreate
 
 app = FastAPI(
