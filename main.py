@@ -2,12 +2,12 @@ from fastapi_users import FastAPIUsers
 
 from fastapi import FastAPI, Depends
 
-from auth.base_config import auth_backend
-from auth.manager import get_user_manager
-from auth.models import User
-from auth.schemas import UserRead, UserCreate
+from src.auth.base_config import auth_backend
+from src.auth.manager import get_user_manager
+from src.auth.models import User
+from src.auth.schemas import UserRead, UserCreate
 
-from operations.router import router as router_operation
+from src.operations.router import router as router_operation
 
 app = FastAPI(
     title="Trading App"
