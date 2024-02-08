@@ -2,12 +2,13 @@ import smtplib
 from email.message import EmailMessage
 
 from celery import Celery
-from src.config import SMTP_USER, SMTP_PASSWORD
 
-SMTP_HOST = 'smt.gmail.com'
+from src.config import SMTP_PASSWORD, SMTP_USER
+
+SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 465
 
-celery = Celery('task', broker='redis://localhost:6379')  # Указываем название нашего отложенного действия
+celery = Celery('tasks', broker='redis://localhost:6379') #Указываем название нашего отложенного действия
 
 
 def get_email_template_dashboard(username: str):
